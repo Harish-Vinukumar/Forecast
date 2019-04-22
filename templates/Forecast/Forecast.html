@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load bootstrap4  %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>HarishCoder</title>
+        <link rel = "shortcut icon" type = "image/png" href = "https://lh3.googleusercontent.com/-4pWXftgjvLQ/XAKnTfRwkMI/AAAAAAAAFlI/tIHnV-ztarEk6UdDmDXtMbyw5Y6ZU8hvwCL0BGAs/w530-d-h742-n-rw/Logo.png">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/forecast.css' %}">
+        <link href="https://fonts.googleapis.com/css?family=Caveat|Covered+By+Your+Grace|Gloria+Hallelujah|Kaushan+Script|Marck+Script|Satisfy|Shadows+Into+Light|Yellowtail" rel="stylesheet">
+    </head>
+    <body style="background: url('{% static 'images/Forecast/Forecast.jpg' %}') no-repeat center fixed; background-size: cover; overflow-y: hidden;">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="box" style="alignment: center;">
+            <div class="container">
+                <div style="position: center;">
+                    <br>
+                    <h1 style="text-align: center;">Weather Forecast</h1><br><br>
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <center>
+                            {% bootstrap_form form %}
+                            <br>
+                            <input class="btn btn-primary" type="submit" value="Search">
+                        </center>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <footer style="position: fixed; bottom: 0%; right:0%; font-family: 'Caveat', cursive; font-size: larger; font-weight: bolder; color: whitesmoke;">
+            <small class="container">Developed using Django</small>
+        </footer>
+    </body>
+</html>
